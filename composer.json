@@ -11,10 +11,10 @@
     "homepage": "https://github.com/clembet/omnipay-pagarme",
     "require": {
         "php": ">=7.0",
-        "omnipay/common": "^3.0"
+        "clembet/omnipay-common": "^3.0"
     },
     "require-dev": {
-        "omnipay/tests": "~3.0"
+        "clembet/omnipay-tests": "~3.0"
     },
     "license": "MIT",
     "authors": [
