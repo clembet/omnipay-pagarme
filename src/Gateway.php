@@ -62,6 +62,11 @@ class Gateway extends AbstractGateway
         return $this->setParameter('secretKey', $value);
     }
 
+    public function parseResponse($data)
+    {
+        $request = $this->createRequest('\Omnipay\Pagarme\Message\PurchaseRequest', []);
+        return new \Omnipay\Pagarme\Message\Response($request, (array)$data);
+    }
 
     /**
      * Authorize Request

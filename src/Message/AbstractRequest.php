@@ -135,11 +135,6 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         $this->setParameter('paymentType', $value);
     }
 
-    public function getAmount()
-    {
-        return (int)round((parent::getAmount()*100.0), 0);
-    }
-
     public function getDueDate()
     {
         $dueDate = $this->getParameter('dueDate');
@@ -299,7 +294,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
             ]
         ];
 
-        // onde coloca o valor total da transação com o valor do frete ? "Amount"=>$this->getAmount(),
+        // onde coloca o valor total da transação com o valor do frete ? "Amount"=>$this->getAmountInteger(),
 
         return $data;
     }
@@ -323,7 +318,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
             ]
         ];
 
-        // onde coloca o valor total da transação com o valor do frete ? "Amount"=>$this->getAmount(),
+        // onde coloca o valor total da transação com o valor do frete ? "Amount"=>$this->getAmountInteger(),
 
         return $data;
     }

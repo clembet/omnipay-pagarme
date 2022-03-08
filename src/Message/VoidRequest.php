@@ -31,7 +31,7 @@ class VoidRequest extends AbstractRequest   // está dando  erro para vendas com
         $this->validate('transactionId', 'amount');
         //$data = parent::getData();
         $data = [
-                "amount"=>$this->getAmount(),
+                "amount"=>$this->getAmountInteger(),
                 //"code"=>"ABCDE123"
         ];
 
