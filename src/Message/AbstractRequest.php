@@ -3,8 +3,8 @@
 
 abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 {
-    protected $liveEndpoint = 'https://api.pagar.me/core';
-    protected $testEndpoint = 'https://sandbox.pagar.me/core';
+    protected $liveEndpoint = 'https://api.pagar.me/core';//o ambiente de teste e produção é o mesmo, o que muda é a chaveSecreta
+    //protected $testEndpoint = 'https://sandbox.pagar.me/core';
     protected $version = 5;
     protected $requestMethod = 'POST';
     protected $resource = 'orders';
@@ -190,7 +190,8 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     protected function getEndpoint()
     {
         $version = $this->getVersion();
-        $endPoint = ($this->getTestMode()?$this->testEndpoint:$this->liveEndpoint);
+        //$endPoint = ($this->getTestMode()?$this->testEndpoint:$this->liveEndpoint);
+        $endPoint = $this->liveEndpoint;
         return  "{$endPoint}/v{$version}/{$this->getResource()}";
     }
 

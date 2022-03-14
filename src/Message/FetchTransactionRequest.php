@@ -20,7 +20,7 @@ class FetchTransactionRequest extends AbstractRequest
         $url = sprintf(
             '%s/%s',
             $this->getEndpoint(),
-            $this->getTransactionID()
+            $this->getTransactionID()//TODO: order_id
         );
 
         $httpResponse = $this->httpClient->request($this->getMethod(), $url, $headers);

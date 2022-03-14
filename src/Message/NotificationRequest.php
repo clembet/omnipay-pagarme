@@ -1,6 +1,10 @@
 <?php namespace Omnipay\Pagarme\Message;
 
 /*
+https://docs.pagar.me/docs/webhooks
+
+POST https://api.pagar.me/core/v5/hooks/{hook_id}/
+
  A URL que recebe o POST deve pegar as seguintes variaveis
          {
            "RecurrentPaymentId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",

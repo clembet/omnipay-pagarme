@@ -1,5 +1,6 @@
 <?php namespace Omnipay\Pagarme\Message;
 
+//https://github.com/pagarme/pagarme-php#criando-uma-transa%C3%A7%C3%A3o
 class PurchaseRequest extends AbstractRequest
 {
     protected $resource = 'orders';
