@@ -139,6 +139,8 @@ class Response extends AbstractResponse
     public function getBase64ImageFromUrl($url)
     {
         $type = pathinfo($url, PATHINFO_EXTENSION);
+        if(strcmp($type, 'svg')==0)
+            $type = 'svg+xml';
         $data = file_get_contents($url);
         if (!$data)
             return NULL;
