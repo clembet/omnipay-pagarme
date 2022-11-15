@@ -12,7 +12,7 @@ class CaptureRequest extends AbstractRequest
         $this->validate('transactionId', 'amount');
         //$data = parent::getData();
         $data = [
-                "amount"=>$this->getAmountInteger(),
+                "amount"=>(int)($this->getAmount()*100.0),
                 "code"=>$this->getOrderId()
         ];
 

@@ -294,7 +294,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
             ]
         ];
 
-        // onde coloca o valor total da transação com o valor do frete ? "Amount"=>$this->getAmountInteger(),
+        // onde coloca o valor total da transação com o valor do frete ? "Amount"=>(int)($this->getAmount()*100.0),
 
         return $data;
     }
@@ -318,7 +318,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
             ]
         ];
 
-        // onde coloca o valor total da transação com o valor do frete ? "Amount"=>$this->getAmountInteger(),
+        // onde coloca o valor total da transação com o valor do frete ? "Amount"=>(int)($this->getAmount()*100.0),
 
         return $data;
     }
